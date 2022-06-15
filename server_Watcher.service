@@ -1,0 +1,11 @@
+[Unit]
+Description=server service
+
+[Service]
+Restart=on-failure
+RestartSec=5s
+User=root
+ExecStart=/home/infra/anaconda3/bin/python3 /var/www/server_watcher/server_Watcher.py
+
+[Install]
+WantedBy=multi-user.target
